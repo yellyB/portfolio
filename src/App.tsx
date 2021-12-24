@@ -10,16 +10,13 @@ const { Header, Content, Footer } = Layout;
 const App = () => {
   const [siderKey, setSiderKey] = useState<string>("HOME");
 
-  const handleClick = (p) => {
-    setSiderKey(p);
-  };
   return (
     <Layout>
       <Header>Header</Header>
       <Layout>
         <Content>Content</Content>
         <Sider>
-          <Siders key={siderKey} setKey={handleClick} />
+          <Siders key={siderKey} setKey={setSiderKey} />
         </Sider>
       </Layout>
       <Footer>Footer</Footer>
