@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.less";
 import "./style.css";
 import { Layout } from "antd";
@@ -10,13 +10,15 @@ const { Header, Content, Footer } = Layout;
 const App = () => {
   const [siderKey, setSiderKey] = useState<string>("HOME");
 
+  useEffect(() => {}, []);
+
   return (
     <Layout>
       <Header>Header</Header>
       <Layout>
-        <Content>Content</Content>
+        <Content>content</Content>
         <Sider>
-          <Siders key={siderKey} setKey={setSiderKey} />
+          <Siders siderKey={siderKey} setKey={setSiderKey} />
         </Sider>
       </Layout>
       <Footer>Footer</Footer>

@@ -1,43 +1,38 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Menu } from "antd";
 import {
-  MailOutlined,
-  AppstoreOutlined,
-  SettingOutlined,
+  HomeOutlined,
+  IdcardOutlined,
+  DesktopOutlined,
+  ReconciliationOutlined,
+  WhatsAppOutlined,
 } from "@ant-design/icons";
 
-const Siders = (props: { key: string; setKey: Function }) => {
-  const { key, setKey } = props;
-
-  const handleClick = (e: any) => {
-    setKey(e.key);
-  };
-  console.log(props);
-
-  useEffect(() => {
-    console.log(key);
-  }, [key]);
+const Siders = (props: { siderKey: string; setKey: Function }) => {
+  const { siderKey, setKey } = props;
 
   return (
     <Menu
-      onClick={handleClick}
+      onClick={(e: any) => {
+        setKey(e.key);
+      }}
       style={{ width: "100%" }}
       mode="vertical"
-      defaultSelectedKeys={[key]}
+      selectedKeys={[siderKey]}
     >
-      <Menu.Item key="HOME" icon={<MailOutlined />}>
+      <Menu.Item key="HOME" icon={<HomeOutlined />}>
         HOME
       </Menu.Item>
-      <Menu.Item key="SKILS" icon={<MailOutlined />}>
+      <Menu.Item key="ABOUT ME" icon={<IdcardOutlined />}>
         ABOUT ME
       </Menu.Item>
-      <Menu.Item key="PROJECT" icon={<MailOutlined />}>
+      <Menu.Item key="PROJECT" icon={<DesktopOutlined />}>
         PROJECT
       </Menu.Item>
-      <Menu.Item key="CAREER" icon={<MailOutlined />}>
+      <Menu.Item key="CAREER" icon={<ReconciliationOutlined />}>
         CAREER
       </Menu.Item>
-      <Menu.Item key="CONTACT" icon={<MailOutlined />}>
+      <Menu.Item key="CONTACT" icon={<WhatsAppOutlined />}>
         CONTACT
       </Menu.Item>
     </Menu>
