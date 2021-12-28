@@ -3,7 +3,7 @@ import "./App.less";
 import "./style.css";
 import { Layout, Anchor, Button, Affix, Row, Col, PageHeader } from "antd";
 import Sider from "antd/lib/layout/Sider";
-import { Project, Siders } from "./components";
+import { Project, Career } from "./components";
 import {
   HomeOutlined,
   IdcardOutlined,
@@ -83,8 +83,14 @@ const App = () => {
                 />
                 <Project />
               </Row>
-              <Row id="CAREER" style={{ height: 500, border: "1px solid red" }}>
-                CAREER
+              <Row id="CAREER" style={{ border: "1px solid red" }}>
+                <PageHeader
+                  onBack={() => (window.location.href = "#CAREER")}
+                  title="CAREER"
+                  subTitle="This is a subtitle"
+                  backIcon={<LinkOutlined />}
+                />
+                <Career />
               </Row>
               <Row
                 id="CONTACT"
