@@ -1,0 +1,11 @@
+/* 클래스 이름 지정 형식: [파일이름]_[컴포넌트이름]_[부가설명] */
+
+.app_content_side {
+  padding: 10px;
+  background-color: #fff;
+}
+
+.project_card_grid {
+  width: 100%;
+  margin: 10px;
+}

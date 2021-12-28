@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.less";
 import "./style.css";
-import { Layout, Anchor, Button, Affix, Row, Col } from "antd";
+import { Layout, Anchor, Button, Affix, Row, Col, PageHeader } from "antd";
 import Sider from "antd/lib/layout/Sider";
 import { Project, Siders } from "./components";
 import {
@@ -10,6 +10,7 @@ import {
   DesktopOutlined,
   ReconciliationOutlined,
   WhatsAppOutlined,
+  LinkOutlined,
 } from "@ant-design/icons";
 
 const { Link } = Anchor;
@@ -49,7 +50,7 @@ const App = () => {
         {/* </Sider> */}
         <Content>
           <Row>
-            <Col span={3}>
+            <Col span={4} className="app_content_side">
               <Anchor>
                 {keyList.map((item: any) => (
                   <Link
@@ -63,7 +64,7 @@ const App = () => {
                 ))}
               </Anchor>
             </Col>
-            <Col span={21}>
+            <Col span={20}>
               <Row id="HOME" style={{ height: 500, border: "1px solid red" }}>
                 HOME
               </Row>
@@ -73,10 +74,13 @@ const App = () => {
               >
                 ABOUT ME
               </Row>
-              <Row
-                id="PROJECT"
-                style={{ height: 500, border: "1px solid red" }}
-              >
+              <Row id="PROJECT" style={{ border: "1px solid green" }}>
+                <PageHeader
+                  onBack={() => (window.location.href = "#PROJECT")}
+                  title="PROJECT"
+                  subTitle="This is a subtitle"
+                  backIcon={<LinkOutlined />}
+                />
                 <Project />
               </Row>
               <Row id="CAREER" style={{ height: 500, border: "1px solid red" }}>
