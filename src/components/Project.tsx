@@ -15,9 +15,9 @@ const Project = () => {
       <Card title="패션플러스 어드민" className="project_card_grid">
         <Row>
           <Col span={15}>
-            <Carousel autoplay>
-              {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((i: number) => (
-                <div>
+            <Image.PreviewGroup>
+              <Carousel autoplay>
+                {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((i: number) => (
                   <Image
                     width={640}
                     height={336}
@@ -28,9 +28,9 @@ const Project = () => {
                       ".png"
                     }
                   />
-                </div>
-              ))}
-            </Carousel>
+                ))}
+              </Carousel>
+            </Image.PreviewGroup>
           </Col>
           <Col span={9}>
             <p>VB로 개발된 레거시 응용프로그램을 웹서비스로 컨버팅</p>
@@ -49,9 +49,9 @@ const Project = () => {
       <Card title="BOM CINEMA" className="project_card_grid">
         <Row>
           <Col span={15}>
-            <Carousel autoplay>
-              {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((i: number) => (
-                <div>
+            <Image.PreviewGroup>
+              <Carousel autoplay>
+                {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((i: number) => (
                   <Image
                     width={640}
                     height={336}
@@ -59,9 +59,9 @@ const Project = () => {
                       process.env.PUBLIC_URL + "/images/cinema/" + i + ".png"
                     }
                   />
-                </div>
-              ))}
-            </Carousel>
+                ))}
+              </Carousel>
+            </Image.PreviewGroup>
           </Col>
           <Col span={9}>
             <p>redux를 이용한 store관리</p>
@@ -76,9 +76,9 @@ const Project = () => {
       <Card title="포크쿡" className="project_card_grid">
         <Row>
           <Col span={15}>
-            <Carousel autoplay>
-              {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((i: number) => (
-                <div>
+            <Image.PreviewGroup>
+              <Carousel autoplay>
+                {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((i: number) => (
                   <Image
                     width={640}
                     height={336}
@@ -86,9 +86,9 @@ const Project = () => {
                       process.env.PUBLIC_URL + "/images/forkcook/" + i + ".png"
                     }
                   />
-                </div>
-              ))}
-            </Carousel>
+                ))}
+              </Carousel>
+            </Image.PreviewGroup>
           </Col>
           <Col span={9}>
             <p>에이콘 아카데이 파이널 프로젝트</p>
@@ -98,12 +98,6 @@ const Project = () => {
           </Col>
         </Row>
       </Card>
-      <Row>
-        <Col span={24}></Col>
-        <Col span={24}></Col>
-        <Col span={24}></Col>
-        <Col span={24}></Col>
-      </Row>
     </React.Fragment>
   );
 };

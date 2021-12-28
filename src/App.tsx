@@ -3,7 +3,7 @@ import "./App.less";
 import "./style.css";
 import { Layout, Anchor, Button, Affix, Row, Col, PageHeader } from "antd";
 import Sider from "antd/lib/layout/Sider";
-import { Project, Career } from "./components";
+import { Skills, Project, Career, AboutMe, Contact } from "./components";
 import {
   HomeOutlined,
   IdcardOutlined,
@@ -21,9 +21,10 @@ const App = () => {
   const [siderKey, setSiderKey] = useState<string>("HOME");
   const keyList = [
     { title: "HOME", icon: <HomeOutlined /> },
-    { title: "ABOUT ME", icon: <IdcardOutlined /> },
+    { title: "SKILLS", icon: <DesktopOutlined /> },
     { title: "PROJECT", icon: <DesktopOutlined /> },
     { title: "CAREER", icon: <ReconciliationOutlined /> },
+    { title: "ABOUT ME", icon: <IdcardOutlined /> },
     { title: "CONTACT", icon: <WhatsAppOutlined /> },
   ];
 
@@ -68,11 +69,14 @@ const App = () => {
               <Row id="HOME" style={{ height: 500, border: "1px solid red" }}>
                 HOME
               </Row>
-              <Row
-                id="ABOUT ME"
-                style={{ height: 500, border: "1px solid red" }}
-              >
-                ABOUT ME
+              <Row id="SKILLS" style={{ border: "1px solid green" }}>
+                <PageHeader
+                  onBack={() => (window.location.href = "#SKILLS")}
+                  title="SKILLS"
+                  subTitle="This is a subtitle"
+                  backIcon={<LinkOutlined />}
+                />
+                <Skills />
               </Row>
               <Row id="PROJECT" style={{ border: "1px solid green" }}>
                 <PageHeader
@@ -93,10 +97,16 @@ const App = () => {
                 <Career />
               </Row>
               <Row
+                id="ABOUT ME"
+                style={{ height: 500, border: "1px solid red" }}
+              >
+                <AboutMe />
+              </Row>
+              <Row
                 id="CONTACT"
                 style={{ height: 500, border: "1px solid red" }}
               >
-                CONTACT
+                <Contact />
               </Row>
             </Col>
           </Row>

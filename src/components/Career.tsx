@@ -3,15 +3,15 @@ import { Timeline, Col, Card, Carousel, Image } from "antd";
 import { ClockCircleOutlined, RightOutlined } from "@ant-design/icons";
 
 const Career = () => {
-  const color = "#877934";
+  const color = "#00a2b3";
   return (
     <React.Fragment>
-      <Card>
+      <Card className="project_card_grid">
         <Timeline mode="left">
           <Timeline.Item
             label="2019.11 ~ ing"
-            dot={<ClockCircleOutlined />}
-            color={"green"}
+            dot={<ClockCircleOutlined style={{ color: "#00a2b3" }} />}
+            // color="blue"
           >
             패션플러스 / Full Stack Developer
           </Timeline.Item>
