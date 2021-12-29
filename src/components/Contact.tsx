@@ -10,9 +10,9 @@ import {
 const Contact = () => {
   const handleOnClick = (type: string) => {
     if (type === "website") {
-      window.location.href = "https://bomoto.tistory.com/";
+      window.open("https://bomoto.tistory.com/", "_blank");
     } else if (type === "github") {
-      window.location.href = "https://github.com/yellyB";
+      window.open("https://github.com/yellyB", "_blank");
     }
   };
 
