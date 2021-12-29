@@ -4,8 +4,15 @@
   padding: 10px;
   background-color: #fff;
 }
+.app_content_main {
+  padding: 10px;
+}
 
 .project_card_grid {
   width: 100%;
   margin: 10px;
+}
+
+.skills_card_slider {
+  width: 80%;
 }

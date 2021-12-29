@@ -7,6 +7,7 @@ import { Skills, Project, Career, AboutMe, Contact } from "./components";
 import {
   HomeOutlined,
   IdcardOutlined,
+  ToolOutlined,
   DesktopOutlined,
   ReconciliationOutlined,
   WhatsAppOutlined,
@@ -21,7 +22,7 @@ const App = () => {
   const [siderKey, setSiderKey] = useState<string>("HOME");
   const keyList = [
     { title: "HOME", icon: <HomeOutlined /> },
-    { title: "SKILLS", icon: <DesktopOutlined /> },
+    { title: "SKILLS", icon: <ToolOutlined /> },
     { title: "PROJECT", icon: <DesktopOutlined /> },
     { title: "CAREER", icon: <ReconciliationOutlined /> },
     { title: "ABOUT ME", icon: <IdcardOutlined /> },
@@ -37,18 +38,7 @@ const App = () => {
 
   return (
     <Layout style={{ fontFamily: "nexonGothic" }}>
-      {/* <Header>Header</Header> */}
       <Layout>
-        {/* <Sider> */}
-        {/* <Affix offsetTop={10}>
-            <Siders siderKey={siderKey} setKey={handleSideKey} />
-          </Affix> */}
-        {/* <Anchor>
-          {keyList.map((item: string) => (
-            <Link href={"#" + item} title={item} />
-          ))}
-        </Anchor> */}
-        {/* </Sider> */}
         <Content>
           <Row>
             <Col span={4} className="app_content_side">
@@ -65,7 +55,7 @@ const App = () => {
                 ))}
               </Anchor>
             </Col>
-            <Col span={20}>
+            <Col span={20} className="app_content_main">
               <Row id="HOME" style={{ height: 500, border: "1px solid red" }}>
                 HOME
               </Row>
