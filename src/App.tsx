@@ -45,13 +45,13 @@ const App = () => {
       <Layout>
         <Content>
           <Row>
-            <Col span={4} className="app_content_side">
-              <Anchor>
+            <Col span={4} className="app_content_side_wrapper">
+              <Anchor className="app_content_side_anchor">
                 {keyList.map((item: any) => (
                   <Link
                     href={"#" + item.title}
                     title={
-                      <div style={{ fontSize: 20, fontWeight: "bold" }}>
+                      <div className="app_content_side_anchor_link">
                         {item.icon} {item.title}
                       </div>
                     }
@@ -59,7 +59,7 @@ const App = () => {
                 ))}
               </Anchor>
             </Col>
-            <Col span={20} className="app_content_main">
+            <Col span={20} className="app_content_main_wrapper">
               <Row id="HOME" style={{ height: 500, border: "1px solid red" }}>
                 HOME
               </Row>

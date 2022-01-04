@@ -1,11 +1,20 @@
 /* 클래스 이름 지정 형식: [파일이름]_[컴포넌트이름]_[부가설명] */
 
-.app_content_side {
-  padding: 10px;
+.app_content_side_wrapper {
+  padding: 20px;
+  padding-top: 0px;
   background-color: #fff;
 }
-.app_content_main {
+.app_content_main_wrapper {
   padding: 10px;
+}
+.app_content_side_anchor {
+  margin-top: 20px;
+}
+.app_content_side_anchor_link {
+  margin-top: 8px;
+  font-size: 18pt;
+  font-weight: bold;
 }
 
 .project_card_grid {
@@ -13,9 +22,18 @@
   margin: 10px;
 }
 
-.career_card_grid {
-  width: 60%;
+.career_card {
+  width: 70%;
   margin: 10px;
+}
+.career_card_timeline {
+  border: 1px solid red;
+  margin-left: -40%;
+  margin-top: 10px;
+  margin-bottom: -20px;
+}
+.career_card_text {
+  font-size: 14pt;
 }
 
 .aboutme_btn {
