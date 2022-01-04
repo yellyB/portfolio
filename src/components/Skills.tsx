@@ -11,20 +11,21 @@ const gridStyle = {
 const Skills = () => {
   const skills = [
     {
-      title: "front-end",
+      title: "Front-End",
       list: [
         { name: "react" },
         { name: "nodejs" },
         { name: "typescript", height: "60%" },
-        { name: "javascript", height: "60%" },
-        { name: "css", height: "50%" },
-        { name: "html", height: "70%" },
-        { name: "jquery", height: "70%" },
-        { name: "mobx", height: "60%" },
+        { name: "htmlcssjs" },
+        // { name: "javascript", height: "60%" },
+        // { name: "css", height: "50%" },
+        // { name: "html", height: "70%" },
+        // { name: "jquery", height: "70%" },
+        // { name: "mobx", height: "60%" },
       ],
     },
     {
-      title: "back-end",
+      title: "Back-End",
       list: [
         { name: "python" },
         { name: "csharp", height: "50%" },
@@ -32,11 +33,11 @@ const Skills = () => {
       ],
     },
     {
-      title: "database",
+      title: "Database",
       list: [{ name: "mssql" }],
     },
     {
-      title: "tools",
+      title: "Tools",
       list: [
         { name: "git" },
         { name: "slack" },
