@@ -9,6 +9,7 @@ const contentStyle = {
   background: "#364d79",
 };
 
+console.log(Array.from({ length: 5 }, (v, i) => i));
 const Project = () => {
   return (
     <React.Fragment>
@@ -17,7 +18,7 @@ const Project = () => {
           <Col span={15}>
             <Image.PreviewGroup>
               <Carousel autoplay>
-                {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((i: number) => (
+                {Array.from({ length: 10 }, (v, i) => i).map((i: number) => (
                   <Image
                     width={640}
                     height={336}
@@ -51,7 +52,7 @@ const Project = () => {
           <Col span={15}>
             <Image.PreviewGroup>
               <Carousel autoplay>
-                {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((i: number) => (
+                {Array.from({ length: 10 }, (v, i) => i).map((i: number) => (
                   <Image
                     width={640}
                     height={336}
@@ -78,7 +79,7 @@ const Project = () => {
           <Col span={15}>
             <Image.PreviewGroup>
               <Carousel autoplay>
-                {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((i: number) => (
+                {Array.from({ length: 15 }, (v, i) => i).map((i: number) => (
                   <Image
                     width={640}
                     height={336}
