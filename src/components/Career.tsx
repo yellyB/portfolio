@@ -6,8 +6,11 @@ const Career = () => {
   const color = "#00a2b3";
   return (
     <React.Fragment>
-      <Card className="project_card_grid">
-        <Timeline mode="left">
+      <Card className="career_card_grid">
+        <Timeline
+          mode="left"
+          style={{ border: "1px solid red", marginLeft: -500 }}
+        >
           <Timeline.Item
             label="2019.11 ~ ing"
             dot={<ClockCircleOutlined style={{ color: "#00a2b3" }} />}

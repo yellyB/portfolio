@@ -1,11 +1,13 @@
 import React from "react";
-import { Button, Tooltip } from "antd";
+import { Row, Col, Button, Typography } from "antd";
 import {
   GlobalOutlined,
   GithubOutlined,
   MailOutlined,
   MobileOutlined,
 } from "@ant-design/icons";
+
+const { Text } = Typography;
 
 const Contact = () => {
   const handleOnClick = (type: string) => {
@@ -18,32 +20,46 @@ const Contact = () => {
 
   return (
     <React.Fragment>
-      <Tooltip title="website">
-        <Button
-          type="primary"
-          shape="circle"
-          icon={<GlobalOutlined />}
-          onClick={() => handleOnClick("website")}
-        />
-      </Tooltip>
-      <Tooltip title="github">
-        <Button
-          type="primary"
-          shape="circle"
-          icon={<GithubOutlined />}
-          onClick={() => handleOnClick("github")}
-        />
-      </Tooltip>
-      <Tooltip title="kk3p1q1@gmail.com">
-        <Button type="primary" shape="circle" icon={<MailOutlined />} />
-      </Tooltip>
-      <Tooltip title="010.7448.4171">
-        <Button type="primary" shape="circle" icon={<MobileOutlined />} />
-      </Tooltip>
-      {/* <GlobalOutlined onClick={() => handleOnClick("website")} />
-      <GithubOutlined onClick={() => handleOnClick("github")} />
-      <MailOutlined />
-      <MobileOutlined /> */}
+      <Row>
+        <Col span={12}>
+          <Button
+            type="primary"
+            shape="round"
+            icon={<MobileOutlined className="aboutme_textsize" />}
+            className="aboutme_btn"
+          />
+          <Text className="aboutme_textsize">PHONE</Text>
+        </Col>
+        <Col span={12}>
+          <Button
+            type="primary"
+            shape="round"
+            icon={<MailOutlined className="aboutme_textsize" />}
+            className="aboutme_btn"
+          />
+          <Text className="aboutme_textsize">Email</Text>
+        </Col>
+        <Col span={12}>
+          <Button
+            type="primary"
+            shape="round"
+            icon={<GlobalOutlined className="aboutme_textsize" />}
+            className="aboutme_btn"
+            onClick={() => handleOnClick("website")}
+          />
+          <Text className="aboutme_textsize">WebSite</Text>
+        </Col>
+        <Col span={12}>
+          <Button
+            type="primary"
+            shape="round"
+            icon={<GithubOutlined className="aboutme_textsize" />}
+            className="aboutme_btn"
+            onClick={() => handleOnClick("github")}
+          />
+          <Text className="aboutme_textsize">GitHub</Text>
+        </Col>
+      </Row>
     </React.Fragment>
   );
 };

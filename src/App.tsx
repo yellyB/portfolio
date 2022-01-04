@@ -18,6 +18,10 @@ const { Link } = Anchor;
 
 const { Header, Content, Footer } = Layout;
 
+const linkIconStyle = {
+  fontSize: "18pt",
+};
+
 const App = () => {
   const [siderKey, setSiderKey] = useState<string>("HOME");
   const keyList = [
@@ -64,7 +68,7 @@ const App = () => {
                   onBack={() => (window.location.href = "#SKILLS")}
                   title="SKILLS"
                   subTitle="This is a subtitle"
-                  backIcon={<LinkOutlined />}
+                  backIcon={<LinkOutlined style={linkIconStyle} />}
                 />
                 <Skills />
               </Row>
@@ -73,7 +77,7 @@ const App = () => {
                   onBack={() => (window.location.href = "#PROJECT")}
                   title="PROJECT"
                   subTitle="This is a subtitle"
-                  backIcon={<LinkOutlined />}
+                  backIcon={<LinkOutlined style={linkIconStyle} />}
                 />
                 <Project />
               </Row>
@@ -82,7 +86,7 @@ const App = () => {
                   onBack={() => (window.location.href = "#CAREER")}
                   title="CAREER"
                   subTitle="This is a subtitle"
-                  backIcon={<LinkOutlined />}
+                  backIcon={<LinkOutlined style={linkIconStyle} />}
                 />
                 <Career />
               </Row>
@@ -90,12 +94,24 @@ const App = () => {
                 id="ABOUT ME"
                 style={{ height: 500, border: "1px solid red" }}
               >
+                <PageHeader
+                  onBack={() => (window.location.href = "#ABOUT ME")}
+                  title="ABOUT ME"
+                  subTitle="This is a subtitle"
+                  backIcon={<LinkOutlined style={linkIconStyle} />}
+                />
                 <AboutMe />
               </Row>
               <Row
                 id="CONTACT"
                 style={{ height: 500, border: "1px solid red" }}
               >
+                <PageHeader
+                  onBack={() => (window.location.href = "#CONTACT")}
+                  title="CONTACT"
+                  subTitle="This is a subtitle"
+                  backIcon={<LinkOutlined style={linkIconStyle} />}
+                />
                 <Contact />
               </Row>
             </Col>
