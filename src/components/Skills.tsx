@@ -4,20 +4,34 @@ import { Row, Col, Slider, Image, Typography, Card } from "antd";
 const { Text } = Typography;
 
 const gridStyle = {
-  width: "100%",
+  width: "25%",
   textAlign: "center",
 };
 
+//TODO: js 빼고 html+css 만 묶기 / c++ c# 합치기
 const Skills = () => {
   const skills = [
     {
-      title: "Front-End",
+      title: "major skills",
       list: [
-        { name: "react" },
+        { name: "react", height: "79%" },
+        { name: "typescript", height: "79%" },
+        { name: "mobx", height: "53%" },
         { name: "nodejs" },
-        { name: "typescript", height: "60%" },
-        { name: "htmlcssjs" },
-        // { name: "javascript", height: "60%" },
+        { name: "javascript", height: "79%" },
+        { name: "htmlcss" },
+        { name: "mssql" },
+        // { name: "css", height: "50%" },
+        // { name: "html", height: "70%" },
+        // { name: "jquery", height: "70%" },
+      ],
+    },
+    {
+      title: "minor skills",
+      list: [
+        { name: "python" },
+        { name: "csharpcpp" },
+        { name: "spring" },
         // { name: "css", height: "50%" },
         // { name: "html", height: "70%" },
         // { name: "jquery", height: "70%" },
@@ -25,47 +39,30 @@ const Skills = () => {
       ],
     },
     {
-      title: "Back-End",
-      list: [
-        { name: "python" },
-        { name: "csharp", height: "50%" },
-        { name: "cpp", height: "50%" },
-      ],
-    },
-    {
-      title: "Database",
-      list: [{ name: "mssql" }],
-    },
-    {
       title: "Tools",
       list: [
         { name: "git" },
+        { name: "jenkins" },
         { name: "slack" },
         { name: "jira" },
-        { name: "jenkins" },
       ],
     },
-  ];
-
-  const levels = [
-    { skill: "react", level: 100 },
-    { skill: "nodejs", level: 90 },
-    { skill: "typescript", level: 90 },
-    { skill: "javascript", level: 100 },
-    { skill: "python", level: 60 },
-    { skill: "mssql", level: 70 },
   ];
 
   return (
     <React.Fragment>
-      <Row>
+      <Row justify="center">
         {skills.map((item: { title: string; list: any[] }) => (
-          <Col span={4} offset={1}>
-            <Card title={item.title} hoverable={true}>
+          <Col span={16}>
+            <Card
+              title={item.title}
+              hoverable={true}
+              style={{ marginBottom: 10 }}
+            >
               {item.list.map((lists: { name: string; height?: string }) => (
                 <Card.Grid hoverable={false} style={gridStyle}>
                   <Image
-                    width={lists.height ? lists.height : "100%"}
+                    width={lists.height ? lists.height : "80%"}
                     preview={false}
                     src={
                       process.env.PUBLIC_URL +
@@ -79,60 +76,6 @@ const Skills = () => {
             </Card>
           </Col>
         ))}
-        {/* <Col span={7} offset={1}>
-          <Card title="Card Title">
-            {skills.map((item: any) => (
-              <Card.Grid hoverable={false} style={gridStyle}>
-                <Image
-                  width={100}
-                  // height={200}
-                  preview={false}
-                  src={
-                    process.env.PUBLIC_URL +
-                    "/images/skills/" +
-                    item.skill +
-                    ".png"
-                  }
-                />
-              </Card.Grid>
-            ))}
-          </Card>
-        </Col>
-        <Col span={7} offset={1}>
-          <Card title="Card Title">
-            {skills.map((item: any) => (
-              <Card.Grid hoverable={false} style={gridStyle}>
-                <Image
-                  width={100}
-                  // height={200}
-                  preview={false}
-                  src={
-                    process.env.PUBLIC_URL +
-                    "/images/skills/" +
-                    item.skill +
-                    ".png"
-                  }
-                />
-              </Card.Grid>
-            ))}
-          </Card>
-        </Col> */}
-      </Row>
-      <Row style={{ width: "100%" }} justify="center">
-        <Col span={20}>
-          <Card>
-            {levels.map((item: any) => (
-              <>
-                {item.skill !== 0 && (
-                  <>
-                    <Text>{item.skill}</Text>
-                    <Slider defaultValue={item.level} disabled={true} />
-                  </>
-                )}
-              </>
-            ))}
-          </Card>
-        </Col>
       </Row>
     </React.Fragment>
   );
