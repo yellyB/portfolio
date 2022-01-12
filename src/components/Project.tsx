@@ -9,7 +9,6 @@ const contentStyle = {
   background: "#364d79",
 };
 
-console.log(Array.from({ length: 5 }, (v, i) => i));
 const Project = () => {
   return (
     <React.Fragment>
