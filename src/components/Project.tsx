@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Row, Col, Card, Carousel, Image } from "antd";
-import { LeftOutlined, RightOutlined } from "@ant-design/icons";
+import Fade from "react-reveal/Fade";
+import Typist from "react-typist";
 
-const contentStyle = {
-  height: "160px",
-  color: "#fff",
-  lineHeight: "160px",
-  background: "#364d79",
-};
+const Project = (props: { sideKey: string }) => {
+  const { sideKey } = props;
 
-const Project = () => {
+  const [isChanged, setIsChanged] = useState<boolean>(false);
+
+  useEffect(() => {
+    setIsChanged(sideKey === "#PROJECT" ? true : false);
+  }, [sideKey]);
+
   return (
     <React.Fragment>
       <Card title="패션플러스 어드민" className="project_card_grid">
@@ -33,16 +35,18 @@ const Project = () => {
             </Image.PreviewGroup>
           </Col>
           <Col span={9}>
-            <p>VB로 개발된 레거시 응용프로그램을 웹서비스로 컨버팅</p>
-            <p>React / typescript / Express</p>
-            <p>RESTful API</p>
-            <p>mobX를 통해 메뉴 검색, 즐겨찾기, 알림 등 store관리</p>
-            <p>JWT를 이용한 인증 관리</p>
-            <p>
-              테이블 내 수정, 전체 데이터 복사 붙여넣기 등 Excel과 비슷한 작업
-              환경 제공
-            </p>
-            <p>건 수 별 로딩을 통해 상세 진행 결과 가시적으로 보여줌</p>
+            <Typist>
+              <p>VB로 개발된 레거시 응용프로그램을 웹서비스로 컨버팅</p>
+              <p>React / typescript / Express</p>
+              <p>RESTful API</p>
+              <p>mobX를 통해 메뉴 검색, 즐겨찾기, 알림 등 store관리</p>
+              <p>JWT를 이용한 인증 관리</p>
+              <p>
+                테이블 내 수정, 전체 데이터 복사 붙여넣기 등 Excel과 비슷한 작업
+                환경 제공
+              </p>
+              <p>건 수 별 로딩을 통해 상세 진행 결과 가시적으로 보여줌</p>
+            </Typist>
           </Col>
         </Row>
       </Card>
@@ -73,7 +77,7 @@ const Project = () => {
       <Card title="PORTFOLIO" className="project_card_grid">
         PORTFOLIO
       </Card>
-      <Card title="포크쿡" className="project_card_grid">
+      <Card title="FORK COOK" className="project_card_grid">
         <Row>
           <Col span={15}>
             <Image.PreviewGroup>

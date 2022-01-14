@@ -1,15 +1,22 @@
 /* 클래스 이름 지정 형식: [파일이름]_[컴포넌트이름]_[부가설명] */
-
-.app_content_side_wrapper {
-  padding: 20px;
-  padding-top: 0px;
-  background-color: #fff;
+.app_layout_wrapper {
+  font-family: "nexonGothic";
+  margin-left: 10%;
+  margin-right: 10%;
 }
 .app_content_main_wrapper {
   padding: 10px;
 }
+.app_content_side_wrapper {
+  padding: 20px;
+  padding-top: 0px;
+  background-color: #b6a4a4;
+}
 .app_content_side_anchor {
-  margin-top: 20px;
+  /* margin-top: 200%; */
+  position: absolute;
+  margin-top: 60px;
+  /* bottom: 100px; */
 }
 .app_content_side_anchor_link {
   margin-top: 8px;
@@ -42,4 +49,11 @@
 }
 .aboutme_textsize {
   font-size: 24pt;
+}
+
+.href_hide_div {
+  border: 1px solid green;
+  /* position: absolute; */
+  margin-top: -10%;
+  width: 100%;
 }
