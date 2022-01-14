@@ -27,18 +27,15 @@ const App = () => {
   const [sideKey, setSideKey] = useState<string>("HOME");
   const keyList = [
     { title: "HOME", icon: <HomeOutlined /> },
-    { title: "SKILLS_ani", icon: <ToolOutlined /> },
     { title: "SKILLS", icon: <ToolOutlined /> },
-    { title: "PROJECT_ani", icon: <DesktopOutlined /> },
     { title: "PROJECT", icon: <DesktopOutlined /> },
-    { title: "CAREER_ani", icon: <ReconciliationOutlined /> },
     { title: "CAREER", icon: <ReconciliationOutlined /> },
-    { title: "ABOUT ME_ani", icon: <IdcardOutlined /> },
     { title: "ABOUT ME", icon: <IdcardOutlined /> },
     { title: "CONTACT", icon: <WhatsAppOutlined /> },
   ];
 
-  const handleSideKey = (key: string) => {
+  const handleSideKeyOnChange = (key: string) => {
+    console.log(key);
     setSideKey(key);
     // window.location.href = "#" + key;
   };
@@ -49,47 +46,47 @@ const App = () => {
     <Layout className="app_layout_wrapper">
       <Layout>
         <Content>
+          <Row id="HOME">
+            <Home sideKey={sideKey} />
+            <div
+              id="SKILLS"
+              style={{
+                border: " 1px solid green",
+                width: "100%",
+                marginTop: "-35%",
+              }}
+            />
+          </Row>
           <Row>
             <Col span={20} className="app_content_main_wrapper">
-              <Row id="HOME" style={{ height: 600 }}>
-                <Home sideKey={sideKey} />
-                <div
-                  id="SKILLS_ani"
-                  style={{
-                    border: " 1px solid green",
-                    width: "100%",
-                    marginTop: "-10%",
-                  }}
-                />
-              </Row>
-              <Row id="SKILLS">
+              <Row>
                 <PageHeader
-                  onBack={() => (window.location.href = "SKILLS")}
+                  onBack={() => (window.location.href = "#SKILLS")}
                   title="SKILLS"
                   subTitle="This is a subtitle"
                   backIcon={<LinkOutlined style={linkIconStyle} />}
                 />
-                <Skills sideKey={sideKey} />{" "}
+                <Skills sideKey={sideKey} />
                 <div
-                  id="PROJECT_ani"
+                  id="PROJECT"
                   style={{
                     border: " 1px solid green",
                     width: "100%",
-                    marginTop: "-40%",
+                    marginTop: "-10%",
                     height: 0,
                   }}
                 />
               </Row>
-              <Row id="PROJECT">
+              <Row style={{ backgroundColor: "#fff" }}>
                 <PageHeader
-                  onBack={() => (window.location.href = "PROJECT")}
+                  onBack={() => (window.location.href = "#PROJECT")}
                   title="PROJECT"
                   subTitle="This is a subtitle"
                   backIcon={<LinkOutlined style={linkIconStyle} />}
                 />
                 <Project sideKey={sideKey} />
                 <div
-                  id="CAREER_ani"
+                  id="CAREER"
                   style={{
                     border: " 1px solid green",
                     width: "100%",
@@ -98,27 +95,18 @@ const App = () => {
                   }}
                 />
               </Row>
-              <Row id="CAREER">
+              <Row>
                 <PageHeader
-                  onBack={() => (window.location.href = "CAREER")}
+                  onBack={() => (window.location.href = "#CAREER")}
                   title="CAREER"
                   subTitle="This is a subtitle"
                   backIcon={<LinkOutlined style={linkIconStyle} />}
                 />
                 <Career sideKey={sideKey} />
-                <div
-                  id="ABOUT ME_ani"
-                  style={{
-                    border: " 1px solid green",
-                    width: "100%",
-                    marginTop: "-10%",
-                    height: 0,
-                  }}
-                />
               </Row>
               <Row id="ABOUT ME" style={{ height: 500 }}>
                 <PageHeader
-                  onBack={() => (window.location.href = "ABOUT ME")}
+                  onBack={() => (window.location.href = "#ABOUT ME")}
                   title="ABOUT ME"
                   subTitle="This is a subtitle"
                   backIcon={<LinkOutlined style={linkIconStyle} />}
@@ -127,7 +115,7 @@ const App = () => {
               </Row>
               <Row id="CONTACT" style={{ height: 500 }}>
                 <PageHeader
-                  onBack={() => (window.location.href = "CONTACT")}
+                  onBack={() => (window.location.href = "#CONTACT")}
                   title="CONTACT"
                   subTitle="This is a subtitle"
                   backIcon={<LinkOutlined style={linkIconStyle} />}
@@ -138,7 +126,7 @@ const App = () => {
             <Col span={4} className="app_content_side_wrapper">
               <Anchor
                 className="app_content_side_anchor"
-                onChange={handleSideKey}
+                onChange={handleSideKeyOnChange}
               >
                 {keyList.map((item: any) => (
                   <Link

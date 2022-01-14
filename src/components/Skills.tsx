@@ -65,9 +65,22 @@ const Skills = (props: { sideKey: string }) => {
               hoverable={true}
               style={{ marginBottom: 10 }}
             >
-              <Fade right cascade when={isChanged}>
-                {item.list.map((lists: { name: string; height?: string }) => (
-                  <Card.Grid hoverable={false} style={gridStyle}>
+              {item.list.map((lists: { name: string; height?: string }) => (
+                <Card.Grid hoverable={false} style={gridStyle}>
+                  {isChanged ? (
+                    <Fade right>
+                      <Image
+                        width={lists.height ? lists.height : "80%"}
+                        preview={false}
+                        src={
+                          process.env.PUBLIC_URL +
+                          "/images/skills/" +
+                          lists.name +
+                          ".png"
+                        }
+                      />
+                    </Fade>
+                  ) : (
                     <Image
                       width={lists.height ? lists.height : "80%"}
                       preview={false}
@@ -78,9 +91,9 @@ const Skills = (props: { sideKey: string }) => {
                         ".png"
                       }
                     />
-                  </Card.Grid>
-                ))}
-              </Fade>
+                  )}
+                </Card.Grid>
+              ))}
             </Card>
           </Col>
         ))}

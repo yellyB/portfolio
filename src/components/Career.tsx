@@ -10,8 +10,7 @@ const Career = (props: { sideKey: string }) => {
   const [isChanged, setIsChanged] = useState<boolean>(false);
 
   useEffect(() => {
-    console.log(sideKey);
-    setIsChanged(sideKey === "#CAREER_ani" ? true : false);
+    setIsChanged(sideKey === "#CAREER" ? true : false);
   }, [sideKey]);
 
   return (

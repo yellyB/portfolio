@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Image } from "antd";
+import { Image, Typography } from "antd";
 import Typist from "react-typist";
+
+const { Text } = Typography;
 
 const Home = (props: { sideKey: string }) => {
   const { sideKey } = props;
@@ -20,9 +22,9 @@ const Home = (props: { sideKey: string }) => {
         src={process.env.PUBLIC_URL + "/images/homeImage.png"}
       />
       <div style={{ position: "absolute" }} key={isChanged ? "1" : "2"}>
-        <Typist>
-          Animate this text.{isChanged ? "fwfewfwefef" : "12424142"}
-        </Typist>
+        <Text style={{ fontSize: 30 }}>
+          <Typist>Web Developer.</Typist>
+        </Text>
       </div>
     </React.Fragment>
   );

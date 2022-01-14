@@ -1,4 +1,7 @@
 /* 클래스 이름 지정 형식: [파일이름]_[컴포넌트이름]_[부가설명] */
+#root {
+  background-color: #f0f2f5;
+}
 .app_layout_wrapper {
   font-family: "nexonGothic";
   margin-left: 10%;
