@@ -22,7 +22,7 @@ const AboutMe = () => {
 
   return (
     <React.Fragment>
-      <Row justify="center">
+      <Row justify="center" style={{ marginBottom: 30 }}>
         <Col span={16}>
           <Row>
             <Col span={3}>
