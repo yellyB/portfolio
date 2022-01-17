@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Timeline, Col, Card, Carousel, Image } from "antd";
+import { Timeline, Col, Card, Carousel, Image, Typography } from "antd";
 import { ClockCircleOutlined, RightOutlined } from "@ant-design/icons";
 import Zoom from "react-reveal/Zoom";
 

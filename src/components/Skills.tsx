@@ -16,13 +16,13 @@ const Skills = (props: { sideKey: string }) => {
     {
       title: "major skills",
       list: [
-        { name: "react", height: "79%" },
-        { name: "typescript", height: "79%" },
-        { name: "mobx", height: "53%" },
+        { name: "react", height: "79.9%" },
+        { name: "typescript", height: "79.9%" },
+        { name: "mobx", height: "79.9%" },
         { name: "nodejs" },
-        { name: "javascript", height: "79%" },
-        { name: "htmlcss" },
-        { name: "mssql" },
+        { name: "javascript", height: "79.9%" },
+        { name: "htmlcss", height: "79.9%" },
+        { name: "mssql", height: "79.9%" },
         // { name: "css", height: "50%" },
         // { name: "html", height: "70%" },
         // { name: "jquery", height: "70%" },
@@ -53,12 +53,14 @@ const Skills = (props: { sideKey: string }) => {
 
   return (
     <React.Fragment>
-      <Row justify="center">
+      <Row justify="center" style={{ marginBottom: 20 }}>
         {skills.map((item: { title: string; list: any[] }) => (
-          <Col span={16}>
+          <Col span={20}>
             <Card
               title={
-                <Text style={{ fontSize: 18, fontWeight: "bold" }}>
+                <Text
+                  style={{ fontSize: 18, fontWeight: "bold", color: "#48352c" }}
+                >
                   {item.title}
                 </Text>
               }

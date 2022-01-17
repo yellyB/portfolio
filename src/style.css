@@ -1,62 +1,79 @@
 /* 클래스 이름 지정 형식: [파일이름]_[컴포넌트이름]_[부가설명] */
 #root {
-  background-color: #f0f2f5;
+  background-color: #ede9e7;
 }
 .app_layout_wrapper {
   font-family: "nexonGothic";
-  margin-left: 10%;
-  margin-right: 10%;
+  /* margin-left: 10%; */
+  /* margin-right: 10%; */
 }
 .app_content_main_wrapper {
-  padding: 10px;
+  /* padding: 0px 20px 0px 40px; */
 }
+.app_pageheader {
+  margin-top: 20px;
+}
+
+.app_content_odd {
+  background-color: #ede9e7;
+}
+
+.app_content_even {
+  background-color: #ffffff;
+}
+
 .app_content_side_wrapper {
-  padding: 20px;
-  padding-top: 0px;
-  background-color: #b6a4a4;
+  padding: 0px 20px 20px 10px;
+  background-color: #48352c;
 }
 .app_content_side_anchor {
-  /* margin-top: 200%; */
   position: absolute;
-  margin-top: 60px;
-  /* bottom: 100px; */
+  margin: 60px 0px 0px 0px;
 }
 .app_content_side_anchor_link {
   margin-top: 8px;
   font-size: 18pt;
   font-weight: bold;
+  height: 30%;
 }
 
 .project_card_grid {
-  width: 100%;
-  margin: 10px;
+  width: 97%;
+  margin: 0px 0px 30px 30px;
+  border: 1px solid #8d9c9d;
+  box-shadow: 3px 3px 10px 3px #dadada;
+  border-radius: 5px;
 }
 
 .career_card {
-  width: 70%;
-  margin: 10px;
+  margin: 0px 0px 30px 30px;
+  box-shadow: 3px 3px 10px 3px #dadada;
+  border-radius: 20px;
 }
 .career_card_timeline {
-  border: 1px solid red;
-  margin-left: -40%;
-  margin-top: 10px;
-  margin-bottom: -20px;
+  margin: 20px 0px -30px -30%;
+  font-size: 14pt;
 }
 .career_card_text {
   font-size: 14pt;
+  color: #62544e;
 }
 
 .aboutme_btn {
-  width: 80px;
-  height: 60px;
+  width: 60px;
+  height: 40px;
+  margin-bottom: 3px;
 }
 .aboutme_textsize {
-  font-size: 24pt;
+  color: #48352c;
+  font-size: 18pt;
+  font-family: "nexonGothic_Bold";
 }
-
-.href_hide_div {
-  border: 1px solid green;
-  /* position: absolute; */
-  margin-top: -10%;
-  width: 100%;
+.aboutme_textsize_content {
+  color: #48352c;
+  font-size: 18pt;
+}
+.aboutme_textsize_content_icon {
+  color: #43caff;
+  font-size: 18pt;
 }

@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Row, Col, Card, Carousel, Image } from "antd";
+import { Row, Col, Card, Carousel, Image, Typography } from "antd";
 import Fade from "react-reveal/Fade";
 import Typist from "react-typist";
+
+const { Text } = Typography;
+
+const imageWidth = "95%";
+const imageHeight = "95%";
 
 const Project = (props: { sideKey: string }) => {
   const { sideKey } = props;
@@ -14,15 +19,15 @@ const Project = (props: { sideKey: string }) => {
 
   return (
     <React.Fragment>
-      <Card title="패션플러스 어드민" className="project_card_grid">
+      <Card title="패션플러스 Admin" className="project_card_grid">
         <Row>
           <Col span={15}>
             <Image.PreviewGroup>
               <Carousel autoplay>
                 {Array.from({ length: 10 }, (v, i) => i).map((i: number) => (
                   <Image
-                    width={640}
-                    height={336}
+                    width={imageWidth}
+                    height={imageHeight}
                     src={
                       process.env.PUBLIC_URL +
                       "/images/fashionplusAdmin/" +
@@ -35,18 +40,16 @@ const Project = (props: { sideKey: string }) => {
             </Image.PreviewGroup>
           </Col>
           <Col span={9}>
-            <Typist>
-              <p>VB로 개발된 레거시 응용프로그램을 웹서비스로 컨버팅</p>
-              <p>React / typescript / Express</p>
-              <p>RESTful API</p>
-              <p>mobX를 통해 메뉴 검색, 즐겨찾기, 알림 등 store관리</p>
-              <p>JWT를 이용한 인증 관리</p>
-              <p>
-                테이블 내 수정, 전체 데이터 복사 붙여넣기 등 Excel과 비슷한 작업
-                환경 제공
-              </p>
-              <p>건 수 별 로딩을 통해 상세 진행 결과 가시적으로 보여줌</p>
-            </Typist>
+            <p>VB로 개발된 레거시 응용프로그램을 웹서비스로 컨버팅</p>
+            <p>React / typescript / Express</p>
+            <p>RESTful API</p>
+            <p>mobX를 통해 메뉴 검색, 즐겨찾기, 알림 등 store관리</p>
+            <p>JWT를 이용한 인증 관리</p>
+            <p>
+              테이블 내 수정, 전체 데이터 복사 붙여넣기 등 Excel과 비슷한 작업
+              환경 제공
+            </p>
+            <p>건 수 별 로딩을 통해 상세 진행 결과 가시적으로 보여줌</p>
           </Col>
         </Row>
       </Card>
@@ -57,8 +60,8 @@ const Project = (props: { sideKey: string }) => {
               <Carousel autoplay>
                 {Array.from({ length: 10 }, (v, i) => i).map((i: number) => (
                   <Image
-                    width={640}
-                    height={336}
+                    width={imageWidth}
+                    height={imageHeight}
                     src={
                       process.env.PUBLIC_URL + "/images/cinema/" + i + ".png"
                     }
@@ -84,8 +87,8 @@ const Project = (props: { sideKey: string }) => {
               <Carousel autoplay>
                 {Array.from({ length: 15 }, (v, i) => i).map((i: number) => (
                   <Image
-                    width={640}
-                    height={336}
+                    width={imageWidth}
+                    height={imageHeight}
                     src={
                       process.env.PUBLIC_URL + "/images/forkcook/" + i + ".png"
                     }

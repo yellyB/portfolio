@@ -5,28 +5,40 @@
   src: url("./fonts/NEXON Lv2 Gothic.ttf");
 }
 
+@font-face {
+  font-family: "nexonGothic_Bold";
+  src: url("./fonts/NEXON Lv2 Gothic Bold.ttf");
+}
+@font-face {
+  font-family: "nexonGothic_Light";
+  src: url("./fonts/NEXON Lv2 Gothic Light.ttf");
+}
+
 div.slick-slider > ul.slick-dots {
-  margin-left: -18%;
+  margin-left: 7%;
 }
 div.slick-slider > ul.slick-dots > li {
   margin-bottom: 15px;
 }
 div.slick-slider > ul.slick-dots > li > button {
   height: 15px;
-  background-color: rgb(194, 181, 111);
-  border: 1px solid rgb(59, 57, 55);
+  background-color: rgb(66, 51, 43);
+  border: 2px solid rgb(255, 255, 255);
 }
 div.slick-slider > ul.slick-dots > li.slick-active > button {
   height: 15px;
-  background-color: rgb(223, 195, 39);
-  border: 1px solid rgb(59, 57, 55);
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(63, 45, 45);
 }
 
 div.ant-slider-disabled > div.ant-slider-track {
   background-color: #f5a300 !important;
 }
+.ant-anchor {
+  margin-left: 10px;
+}
 .ant-anchor > div:nth-child(odd) {
-  border: 1px solid blue;
+  // border: 1px solid blue;
 }
 .ant-anchor-ink::before {
   // background-color: transparent;
@@ -39,7 +51,21 @@ div.ant-slider-disabled > div.ant-slider-track {
 }
 .ant-anchor-link-title {
   color: #fff;
+  margin-left: 10px;
 }
 .ant-anchor-link-active {
   color: #f5a300;
+}
+div.project_card_grid > div.ant-card-head {
+  background-color: #2fa199;
+  color: white;
+  font-size: 14pt;
+  border-radius: 5px;
+}
+.ant-timeline-item-label {
+  padding-right: 10px;
+}
+.ant-card-grid {
+  border-top: 1px solid #ede9e7;
+  border-right: 1px solid #ede9e7;
 }
