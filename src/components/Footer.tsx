@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Row, Col, Slider, Image, Typography, Card } from "antd";
-import Fade from "react-reveal/Fade";
+import React from "react";
+import { Row, Typography } from "antd";
 
 const { Text } = Typography;
 

@@ -67,7 +67,7 @@ const App = () => {
             <div
               id="SKILLS"
               style={{
-                border: " 1px solid green",
+                border: " 0px solid green",
                 width: "100%",
                 marginTop: "-35%",
               }}
@@ -88,7 +88,7 @@ const App = () => {
                 <div
                   id="PROJECT"
                   style={{
-                    border: " 1px solid green",
+                    border: " 0px solid green",
                     width: "100%",
                     marginTop: "-10%",
                     height: 0,
@@ -108,7 +108,7 @@ const App = () => {
                 <div
                   id="CAREER"
                   style={{
-                    border: " 1px solid green",
+                    border: " 0px solid green",
                     width: "100%",
                     marginTop: "-40%",
                     height: 0,
@@ -128,7 +128,7 @@ const App = () => {
                 <div
                   id="ABOUT ME"
                   style={{
-                    border: " 1px solid green",
+                    border: " 0px solid green",
                     width: "100%",
                     marginTop: "-10%",
                     height: 0,

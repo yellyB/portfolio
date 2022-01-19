@@ -26,7 +26,7 @@ const Home = (props: { sideKey: string }) => {
         style={{
           fontSize: 120,
           position: "absolute",
-          marginTop: "20%",
+          marginTop: "25%",
           marginLeft: 20,
         }}
       >

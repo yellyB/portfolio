@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Timeline, Col, Card, Carousel, Image, Typography } from "antd";
-import { ClockCircleOutlined, RightOutlined } from "@ant-design/icons";
+import { Timeline, Card } from "antd";
+import { ClockCircleOutlined } from "@ant-design/icons";
 import Zoom from "react-reveal/Zoom";
 
 const Career = (props: { sideKey: string }) => {

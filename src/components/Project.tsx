@@ -1,11 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Row, Col, Card, Carousel, Image, Typography } from "antd";
-import Fade from "react-reveal/Fade";
-import Typist from "react-typist";
+import { Row, Col, Card, Carousel, Image } from "antd";
 import Link from "antd/lib/typography/Link";
-import Paragraph from "antd/lib/typography/Paragraph";
-
-const { Text } = Typography;
 
 const imageWidth = "95%";
 const imageHeight = "95%";
@@ -90,13 +85,13 @@ const Project = (props: { sideKey: string }) => {
             <p>redux를 이용한 store관리</p>
             <p>react-router를 이용하지 않고 페이지 관리</p>
             <p>
-              URL:
+              -URL:{" "}
               <Link onClick={() => newPage("https://yellyb.github.io/cinema")}>
                 yellyb.github.io/cinema
               </Link>
             </p>
             <p>
-              소스코드:
+              소스코드:{" "}
               <Link onClick={() => newPage("https://github.com/yellyB/cinema")}>
                 github.com/yellyB/cinema
               </Link>
@@ -109,7 +104,7 @@ const Project = (props: { sideKey: string }) => {
           <Col span={15}>
             <Image.PreviewGroup>
               <Carousel autoplay>
-                {Array.from({ length: 10 }, (v, i) => i).map((i: number) => (
+                {Array.from({ length: 5 }, (v, i) => i).map((i: number) => (
                   <Image
                     width={imageWidth}
                     height={imageHeight}
@@ -179,14 +174,14 @@ const Project = (props: { sideKey: string }) => {
               </Link>
             </p>
             <p>- 시연 영상</p>
-            <p>
-              사용자){" "}
+            <p style={{ marginLeft: 20 }}>
+              사용자:{" "}
               <Link onClick={() => newPage("https://youtu.be/Q4Bu8XLQ9DE")}>
                 youtu.be/Q4Bu8XLQ9DE
               </Link>
             </p>
-            <p>
-              관리자){" "}
+            <p style={{ marginLeft: 20 }}>
+              관리자:{" "}
               <Link onClick={() => newPage("https://youtu.be/eoVJOaR-1sY")}>
                 youtu.be/eoVJOaR-1sY
               </Link>
