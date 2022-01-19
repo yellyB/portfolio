@@ -104,7 +104,7 @@ const Project = (props: { sideKey: string }) => {
           <Col span={15}>
             <Image.PreviewGroup>
               <Carousel autoplay>
-                {Array.from({ length: 5 }, (v, i) => i).map((i: number) => (
+                {Array.from({ length: 4 }, (v, i) => i).map((i: number) => (
                   <Image
                     width={imageWidth}
                     height={imageHeight}
