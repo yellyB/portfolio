@@ -94,12 +94,12 @@ const Project = (props: { sideKey: string }) => {
           </Col>
         </Row>
       </Card>
-      <Card title="Whether" className="project_card_grid">
+      <Card title="날씨의 참견" className="project_card_grid">
         <Row>
           <Col span={15}>
             <Image.PreviewGroup>
               <Carousel autoplay>
-                {Array.from({ length: 4 }, (v, i) => i).map((i: number) => (
+                {Array.from({ length: 3 }, (v, i) => i).map((i: number) => (
                   <Image
                     width={imageWidth}
                     height={imageHeight}
