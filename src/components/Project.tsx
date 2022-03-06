@@ -240,7 +240,7 @@ const Project = (props: { sideKey: string }) => {
               에이콘 아카데이 파이널 프로젝트(3人)
             </p>
             <p>음식 주문-픽업 서비스</p>
-            <p>Spring Framework / javascript / JAVA</p>
+            <p>Spring Framework / JavaScript / Oracle</p>
             <p>회원가입, 로그인, 관리자페이지, 장바구니, 리뷰 기능 등 담당</p>
 
             <p>
